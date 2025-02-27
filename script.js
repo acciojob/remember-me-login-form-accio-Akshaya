@@ -10,8 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
             const savedPassword = localStorage.getItem("password");
 
             if (savedUsername && savedPassword) {
-                existingUserButton.classList.remove("hidden");
-            }
+                existingUserButton.style.display='block';
+            }else{
+				existingUserButton.style.display ='none';
+			}
 
             loginForm.addEventListener("submit", function(event) {
                 event.preventDefault();
